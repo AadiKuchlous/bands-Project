@@ -1,0 +1,28 @@
+body {
+	box-sizing: border-box;
+}
+
+h1 {
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	clear: both;
+}
+
+iframe, video {
+	width:320px;
+	height:200px;
+	clear: all;
+	allowfullscreen:true;
+}
+
+.row div{
+	height:230px;
+}
+
+.content-div {
+	padding: 30px;
+}
