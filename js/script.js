@@ -86,7 +86,7 @@ function buildAndShowMainPageHTML (categories) {
           var mainPageViewHtml = buildMainPageViewHtml(categories, mainpageHtml);
           insertHtml("#main-content", categoriesViewHtml);
         }, 
-        false);
+        false),
     false);
 }
 
