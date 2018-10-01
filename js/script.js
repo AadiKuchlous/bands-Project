@@ -77,7 +77,7 @@ function buildAndShowMainPageHTML (bands) {
           insertHtml("head", buildMainPageHeaderHtml())
 
           var mainPageViewHtml = buildMainPageViewHtml(bands, mainpageHtml);
-          insertHtml("#main-content", categoriesViewHtml);
+          insertHtml("#main-content", mainPageViewHtml);
         }, 
         false),
     false);
