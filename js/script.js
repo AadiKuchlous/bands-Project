@@ -47,7 +47,7 @@ function buildMainPageHeaderHtml() {
 
 function buildMainPageViewHtml(bands,
   main_page_Html) {
-
+  var finalHtml = "";
   // Loop over bands
   for (var i = 0; i < bands.length; i++) {
     // Insert category values
