@@ -49,7 +49,7 @@ function buildMainPageViewHtml(bands,
   main_page_Html) {
   var finalHtml = "";
   // Loop over bands
-  for (var i = 0; i < bands.length; i++) {
+  for (var i = 0; i < Object.keys(bands).length; i++) {
     // Insert category values
     var html = main_page_Html;
     var name = "" + bands[i].name;
