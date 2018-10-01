@@ -74,9 +74,6 @@ function buildAndShowMainPageHTML (bands) {
       $ajaxUtils.sendGetRequest(
         mainpageHtml,
         function (mainpageHtml) {
-          // Switch CSS class active to menu button
-          switchMenuToActive();
-
           insertHtml("head", buildMainPageHeaderHtml())
 
           var mainPageViewHtml = buildMainPageViewHtml(bands, mainpageHtml);
