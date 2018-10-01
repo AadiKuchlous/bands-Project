@@ -5,7 +5,7 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
 var dc = {};
 
 var homeHtml = "snippets/main_page.html";
-var allBands =
+var bands =
   "data/list_of_bands.json";
 var main_page_title = "main_page_header.html";
 var mainpageHtml = "snippets/main_page.html";
@@ -36,57 +36,6 @@ var insertProperty = function (string, propName, propValue) {
   return string;
 }
 
-// On first load, show home view
-showLoading("#main-content");
-$ajaxUtils.sendGetRequest(
-  homeHtml,
-  function (responseText) {
-    document.querySelector("#main-content")
-      .innerHTML = responseText;
-  },
-  false);
-
-// Load the menu categories view
-dc.loadMainPageCategories = function () {
-  showLoading("#main-content");
-  $ajaxUtils.sendGetRequest(
-    allBands,
-    buildAndShowMainPageHTML);
-};
-
-
-// // Load the menu items view
-// // 'categoryShort' is a short_name for a category
-// dc.loadMenuItems = function (categoryShort) {
-//   showLoading("#main-content");
-//   $ajaxUtils.sendGetRequest(
-//     menuItemsUrl + categoryShort,
-//     buildAndShowMenuItemsHTML);
-// };
-
-
-// Builds HTML for the categories page based on the data
-// from the server
-function buildAndShowMainPageHTML (categories) {
-  // Load title snippet of categories page
-  $ajaxUtils.sendGetRequest(
-    main_page_title,
-      $ajaxUtils.sendGetRequest(
-        mainpageHtml,
-        function (mainpageHtml) {
-          // Switch CSS class active to menu button
-          switchMenuToActive();
-
-          insertHtml("head", buildMainPageHeaderHtml())
-
-          var mainPageViewHtml = buildMainPageViewHtml(categories, mainpageHtml);
-          insertHtml("#main-content", categoriesViewHtml);
-        }, 
-        false),
-    false);
-}
-
-
 // Using categories data and snippets html
 // build categories view HTML to be inserted into page
 
@@ -96,15 +45,15 @@ function buildMainPageHeaderHtml() {
 }
 
 
-function buildMainPageViewHtml(categories,
+function buildMainPageViewHtml(bands,
   main_page_Html) {
 
-  // Loop over categories
-  for (var i = 0; i < categories.length; i++) {
+  // Loop over bands
+  for (var i = 0; i < bands.length; i++) {
     // Insert category values
     var html = mainpageHtml;
-    var name = "" + categories[i].name;
-    var yl = categories[i].youtube_link;
+    var name = "" + bands[i].name;
+    var yl = bands[i].youtube_link;
     html =
       insertProperty(html, "name", name);
     html =
@@ -116,7 +65,52 @@ function buildMainPageViewHtml(categories,
   return finalHtml;
 }
 
+// Builds HTML for the categories page based on the data
+// from the server
+function buildAndShowMainPageHTML (bands) {
+  // Load title snippet of categories page
+  $ajaxUtils.sendGetRequest(
+    main_page_title,
+      $ajaxUtils.sendGetRequest(
+        mainpageHtml,
+        function (mainpageHtml) {
+          // Switch CSS class active to menu button
+          switchMenuToActive();
 
+          insertHtml("head", buildMainPageHeaderHtml())
+
+          var mainPageViewHtml = buildMainPageViewHtml(bands, mainpageHtml);
+          insertHtml("#main-content", categoriesViewHtml);
+        }, 
+        false),
+    false);
+}
+
+
+
+// On first load, show home view
+showLoading("#main-content");
+buildAndShowMainPageHTML(bands)
+
+
+
+// // Load the menu categories view
+// dc.loadMainPageCategories = function () {
+//   showLoading("#main-content");
+//   $ajaxUtils.sendGetRequest(
+//     allBands,
+//     buildAndShowMainPageHTML);
+// };
+
+
+// // Load the menu items view
+// // 'categoryShort' is a short_name for a category
+// dc.loadMenuItems = function (categoryShort) {
+//   showLoading("#main-content");
+//   $ajaxUtils.sendGetRequest(
+//     menuItemsUrl + categoryShort,
+//     buildAndShowMenuItemsHTML);
+// };
 
 // Builds HTML for the single category page based on the data
 // from the server
