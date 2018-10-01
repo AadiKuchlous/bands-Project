@@ -51,7 +51,7 @@ function buildMainPageViewHtml(bands,
   // Loop over bands
   for (var i = 0; i < bands.length; i++) {
     // Insert category values
-    var html = mainpageHtml;
+    var html = main_page_Html;
     var name = "" + bands[i].name;
     var yl = bands[i].youtube_link;
     html =
