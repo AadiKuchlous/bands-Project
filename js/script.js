@@ -40,11 +40,11 @@ var insertProperty = function (string, propName, propValue) {
 document.addEventListener("DOMContentLoaded", function (event) {
 
 // On first load, show home view
-showLoading("body");
+showLoading("#main-content");
 $ajaxUtils.sendGetRequest(
   homeHtml,
   function (responseText) {
-    document.querySelector("body")
+    document.querySelector("#main-content")
       .innerHTML = responseText;
   },
   false);
@@ -84,7 +84,7 @@ function buildAndShowMainPageHTML (categories) {
           insertHtml("head", buildMainPageHeaderHtml())
 
           var mainPageViewHtml = buildMainPageViewHtml(categories, mainpageHtml);
-          insertHtml("body", categoriesViewHtml);
+          insertHtml("#main-content", categoriesViewHtml);
         },
         false);
     },
