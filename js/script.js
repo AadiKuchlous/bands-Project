@@ -36,9 +36,6 @@ var insertProperty = function (string, propName, propValue) {
   return string;
 }
 
-// On page load (before images or CSS)
-document.addEventListener("DOMContentLoaded", function (event) {
-
 // On first load, show home view
 showLoading("#main-content");
 $ajaxUtils.sendGetRequest(
@@ -48,7 +45,6 @@ $ajaxUtils.sendGetRequest(
       .innerHTML = responseText;
   },
   false);
-});
 
 // Load the menu categories view
 dc.loadMainPageCategories = function () {
