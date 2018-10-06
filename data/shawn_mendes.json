@@ -1,0 +1,186 @@
+{
+	"albums": [
+		{
+			"title" : "handwritten",
+			"songs" : [
+				{
+					"name": "Life of the Party"
+				},
+				{
+					"name": "Stitches"
+				},
+
+				{
+					"name": "Never Be Alone"
+				},
+
+				{
+					"name": "Kid in Love"
+				},
+
+				{
+					"name": "I Don't Even Know Your Name"
+				},
+
+				{
+					"name": "Something Big"
+				},
+
+				{
+					"name": "Strings"
+				},
+
+				{
+					"name": "Aftertaste"
+				},
+
+				{
+					"name": "Air"
+				},
+
+				{
+					"name": "Crazy"
+				},
+
+				{
+					"name": "A Little Too Much"
+				},
+
+				{
+					"name": "This Is What It Takes"
+				}
+			]
+		},
+
+		{
+			"title" : "illuminate",
+			"songs" : [
+				{
+					"name": "Ruin"
+				},
+				
+				{
+					"name": "Mercy"
+				},
+
+				{
+					"name": "Treat You Better"
+				},
+
+				{
+					"name": "Three Empty Words"
+				},
+
+				{
+					"name": "Don't be a Fool"
+				},
+
+				{
+					"name": "Something Big"
+				},
+
+				{
+					"name": "Like This"
+				},
+
+				{
+					"name": "No Promises"
+				},
+
+				{
+					"name": "Lights on"
+				},
+
+				{
+					"name": "Honest"
+				},
+
+				{
+					"name": "Patience"
+				},
+
+				{
+					"name": "Bad Reputation"
+				},
+
+				{
+					"name": "Understand"
+				},
+
+				{
+					"name": "Hold On"
+				},
+
+				{
+					"name": "Roses"
+				},
+
+				{
+					"name": "Mercy (acoustic)"
+				}
+			]
+		},
+
+		{
+			"title" : "Shawn_mendes",
+			"songs" : [
+				{
+					"name": "In My Blood"
+				},
+				
+				{
+					"name": "Nervous"
+				},
+
+				{
+					"name": "Lost In Japan"
+				},
+
+				{
+					"name": "Where Were You in the Morning?"
+				},
+
+				{
+					"name": "Like To Be You"
+				},
+
+				{
+					"name": "Fallin' All In You"
+				},
+
+				{
+					"name": "Particular Taste"
+				},
+
+				{
+					"name": "Why"
+				},
+
+				{
+					"name": "Because I Had You"
+				},
+
+				{
+					"name": "Queen"
+				},
+
+				{
+					"name": "Youth"
+				},
+
+				{
+					"name": "Mutual"
+				},
+
+				{
+					"name": "Perfectly Wrong"
+				},
+
+				{
+					"name": "When You're Ready"
+				}
+			]
+		}
+
+	]
+}
